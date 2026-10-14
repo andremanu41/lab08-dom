@@ -54,5 +54,7 @@ Navegador usado: (escribe aqui cual usaste)
 | Evento | formProducto.addEventListener("submit", ...) | Detecta cuando el usuario interactúa con la página (en este caso, al enviar el formulario). |
 | Objeto | const producto = new Producto(...)           | Instancia un elemento con propiedades y métodos únicos basándose en un molde o clase.       |
 
+L
+
 - [Bitacora de JavaScript interactivo](notas/BITACORA.md)
 - [Ver la pagina en vivo](https://TU-USUARIO.github.io/lab08-dom/)
