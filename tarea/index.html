@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Tareas Interactivo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 500px;
+        margin: 30px auto;
+        padding: 20px;
+      }
+      .error {
+        color: red;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: none;
+      }
+      .completada {
+        text-decoration: line-through;
+        color: gray;
+      }
+      li {
+        margin: 8px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      button {
+        margin-left: 5px;
+        cursor: pointer;
+      }
+      .filtro-container {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mis Tareas Pendientes</h1>
+
+    <!-- Filtro / Buscador (Para el evento 'input' de la V3) -->
+    <div class="filtro-container">
+      <input type="text" id="buscador" placeholder="Buscar tarea..." />
+    </div>
+
+    <!-- Mensaje de Error Visible -->
+    <p id="mensajeError" class="error"></p>
+
+    <!-- Formulario de Ingreso (Para el evento 'submit') -->
+    <form id="formTarea">
+      <input type="text" id="tareaNombre" placeholder="Nombre de la tarea" />
+      <select id="tareaPrioridad">
+        <option value="Alta">Alta</option>
+        <option value="Media">Media</option>
+        <option value="Baja">Baja</option>
+      </select>
+      <button type="submit">Agregar</button>
+    </form>
+
+    <!-- Lista del DOM donde se inyectan las tareas -->
+    <ul id="listaTareas"></ul>
+
+    <script src="app.js"></script>
+  </body>
+</html>
